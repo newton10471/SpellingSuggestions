@@ -1,28 +1,27 @@
 
 
 def score(finder, target)
-	subcursor = 0
-	currentscore = 0
-	topscore = 0 
+	findercount = 0
+	targetcount = 0
+	matchcount = 0
+	topmatchcount = 0
 
-	target_chars = target.split('')
 	finder_chars = finder.split('')
-
-	target_chars.each_with_index do |char, topcursor|
-		p "#{char}, #{topcursor}"
-
-		# need to now cycle through finder's chars, looking for matches
-		while (finder_chars[subcursor] == char)
-			currentscore += 1
-			subcursor += 1
+	target_chars = target.split('')
+	
+	while (findercount < finder.length)
+		p "#{finder_chars[findercount]}, #{findercount}"
+		if (finderchar == targetchar[targetcount]) # current two characters match
+			matchcount += 1
+			
+		else # they don't match
+			# advance the 2nd (or 3rd) cursor until it finds a match or finishes the word
+		  # while (finderchar )
+		  # end
 		end
 
-		topcursor += 1
-		
-		# if finder_chars[subcursor] == char
-		# 	currentscore += 1
-		# end
-
+		findercount += 1
+		targetcount += 1
 	end
 end
 
